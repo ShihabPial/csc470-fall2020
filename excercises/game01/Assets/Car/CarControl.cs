@@ -1,8 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEditor.UIElements;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class CarController : MonoBehaviour
+public class CarControl : MonoBehaviour
 {
-    public float speed = 0;
+    public float speed = 0.0f;
 
     private Rigidbody rb;
     private float mvX;
@@ -23,8 +27,10 @@ public class CarController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 movement = new Vector3(mvX, 0.0f, mvY);
+        Vector2 movement = new Vector3(-5.0f, mvY);
 
         rb.AddForce(movement * speed);
     }
 }
+
+
