@@ -1,10 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.UIElements;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class CarControl : MonoBehaviour
+public class Car2Control : MonoBehaviour
 {
     public float speed = 10.0f;
 
@@ -18,13 +16,12 @@ public class CarControl : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    
 
     void FixedUpdate()
     {
-        Vector3 movement = new Vector3(-3.0f, 0.0f, 0.0f);
+        Vector3 movement = new Vector3(3.0f, 0.0f, 0.0f);
 
         rb.AddForce(movement * speed);
     }
 }
-
-
