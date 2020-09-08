@@ -27,7 +27,7 @@ public class CarControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 movement = new Vector3(-5.0f, mvY);
+        Vector2 movement = new Vector2(-0.5f, 0.0f);
 
         rb.AddForce(movement * speed);
     }
