@@ -34,4 +34,33 @@ public class PlayerController : MonoBehaviour
 }
 
 
+public class PlayerController : MonoBehaviour
+{
+    float speed = 8f;
+    float rotateSpeed = 50f;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        float xAxis = Input.GetAxis("Horizontal");
+        transform.Rotate(0, xAxis * rotateSpeed * Time.deltaTime, 0);
+
+        transform.Translate(transform.forward * Time.deltaTime * speed);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Chakra"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
+}
+
 
