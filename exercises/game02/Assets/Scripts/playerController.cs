@@ -22,9 +22,9 @@ public class playerController : MonoBehaviour
     void Update()
     {
         float hAxis = Input.GetAxis("Horizontal");
-        transform.Rotate(0, hAxis * rotateSpeed * Time.deltaTime , 0);
+        transform.Rotate(0, hAxis * rotateSpeed * Time.deltaTime , 0, Space.World);
 
-        transform.Translate(transform.forward * Time.deltaTime * speed);
+        transform.Translate(transform.forward * Time.deltaTime * speed, Space.World);
 
         if (speed > 0)
         {
