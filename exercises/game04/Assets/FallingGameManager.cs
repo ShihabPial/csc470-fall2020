@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 public class FallingGameManager : MonoBehaviour
 {
 
-    int score = 10;
+    float time = 10.0f;
 
-    public Text scoreText;
+    public Text timeText;
 
     // Start is called before the first frame update
     void Start()
@@ -19,13 +19,14 @@ public class FallingGameManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        score -= 1;
-        scoreText.text = score.ToString();
+    {    
+        time -= Time.deltaTime * 2;
+        timeText.text = time.ToString();
 
-        if(score == 0)
+        if (time < 0)
         {
             SceneManager.LoadScene("WizardScene");
         }
+             
     }
 }
