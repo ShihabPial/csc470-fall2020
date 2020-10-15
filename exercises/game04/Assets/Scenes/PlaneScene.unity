@@ -1560,7 +1560,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press Space to increase speed. When get 2 points move on to the next level.
+  m_Text: 'Press Space to increase speed. When score is 2, pilot will jump. '
 --- !u!222 &1989040294
 CanvasRenderer:
   m_ObjectHideFlags: 0
