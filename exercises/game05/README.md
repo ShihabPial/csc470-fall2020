@@ -13,3 +13,4 @@ I plan on making my game like "Age of Mythology."
 
 1. Visually represents eveything.
 2. Assigning tasks to villagers so they can go back and forth to the food or gold ot tree to town hall. 
+3. Warriors are going to stand and fight and their health will drop, when hits 0 they will be destroyed. 
