@@ -1,4 +1,4 @@
-#Overview
+# Overview
 
 I plan on making my game like "Age of Mythology."
 1. There will be villagers and warriors.
@@ -9,7 +9,7 @@ I plan on making my game like "Age of Mythology."
 6. There will be trees, gold mine and food cultivation. 
 7. Villagers will be tasked to gather food, gold, wood and store them at the town hall. 
 
-#Problems
+# Problems
 
 1. Visually represents eveything.
 2. Assigning tasks to villagers so they can go back and forth to the food or gold ot tree to town hall. 
