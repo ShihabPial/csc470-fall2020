@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: de30fff4d118b4e46b84b9063596fda3
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - a Arush Shiny
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c9d393f863e2eaa468c240648f29f727, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
