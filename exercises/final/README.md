@@ -11,3 +11,9 @@ This is a sample Interface I got from Unity website. I will try to make it like 
 ![alt text](https://github.com/ShihabPial/csc470-fall2020/blob/master/exercises/final/sketch.PNG "sketch")
 
 # Three set targets 
+## Low bar
+One round of game. Kill the bots and the boss to win the game. Only shooting sound will be available. Movement will be as planned. Have a health regeneration point.
+## Target
+Definitelt complete the low bar. Add all kinds of sound described in the plan. Add a few hiding place. 
+## High Bar
+Complete the target. Add a navigation bar on top to see where are all the bots and the boss. 
