@@ -6,3 +6,4 @@ Use W,A,S,D to move around, Space to jump, left Shift to run, right Mouse click 
 
 A nature music will play all the time. There will be shooting sound, a sound when the bots and the boss are destroyed and a victory sound. 
 
+![alt text](https://github.com/ShihabPial/csc470-fall2020/blob/master/exercises/final/sketch.PNG "sketch")
