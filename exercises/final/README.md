@@ -15,7 +15,7 @@ This is a sample Interface I got from Unity website. I will try to make it like 
 ## Low bar
 One round of game. Kill the bots and the boss to win the game. Only shooting sound will be available. Movement will be as planned. Have a health regeneration point.
 ## Target
-Definitelt complete the low bar. Add all kinds of sound described in the plan. Add a few hiding place. 
+Definitely, complete the low bar. Add all kinds of sound described in the plan. Add a few hiding place. 
 ## High Bar
 Complete the target. Add a navigation bar on top to see where are all the bots and the boss. Have a task bar to see what is the player supposed to do. Gun reloading once run out of bullets or plasma. 
 
