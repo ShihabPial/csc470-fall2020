@@ -7,16 +7,16 @@ Use W,A,S,D to move around, Space to jump, left Shift to run, right Mouse click 
 A nature music will play all the time. There will be shooting sound, a sound when the bots and the boss are destroyed and a victory sound. 
 
 
-This is a sample Interface I got from Unity website. I will try to make it like this but exactly same. My gun, enemy and the place will be different. 
+This is a sample Interface I got from Unity website. I will try to make it like this but not exactly same. My gun, enemy and the place will be different. 
 ![alt text](https://github.com/ShihabPial/csc470-fall2020/blob/master/exercises/final/sketch.PNG "sketch")
 ![alt text](https://github.com/ShihabPial/csc470-fall2020/blob/master/exercises/final/sketch2.PNG "sketch2")
 
 # Three set targets 
-## Low bar
+### Low bar
 One round of game. Kill the bots and the boss to win the game. Only shooting sound will be available. Movement will be as planned. Have a health regeneration point.
-## Target
+### Target
 Definitely, complete the low bar. Add all kinds of sound described in the plan. Add a few hiding place. 
-## High Bar
+### High Bar
 Complete the target. Add a navigation bar on top to see where are all the bots and the boss. Have a task bar to see what is the player supposed to do. Gun reloading once run out of bullets or plasma. 
 
 # Timeline 
