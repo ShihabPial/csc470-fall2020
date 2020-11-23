@@ -16,4 +16,4 @@ One round of game. Kill the bots and the boss to win the game. Only shooting sou
 ## Target
 Definitelt complete the low bar. Add all kinds of sound described in the plan. Add a few hiding place. 
 ## High Bar
-Complete the target. Add a navigation bar on top to see where are all the bots and the boss. 
+Complete the target. Add a navigation bar on top to see where are all the bots and the boss. Have a task bar to see what is the player supposed to do. Gun reloading once run out of bullets or plasma. 
