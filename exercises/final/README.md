@@ -17,7 +17,7 @@ One round of game. Kill the bots and the boss to win the game. Only shooting sou
 ### Target
 Definitely, complete the low bar. Add all kinds of sound described in the plan. Add a few hiding place. 
 ### High Bar
-Complete the target. Add a navigation bar on top to see where are all the bots and the boss. Have a task bar to see what is the player supposed to do. Gun reloading once run out of bullets or plasma. 
+Complete the target. Add a navigation bar on top to see where are all the bots and the boss. Have a task bar to see what is the player supposed to do. Gun reloading once run out of bullets or plasma. m Adding crouch and prone.
 
 # Timeline 
 Originally I plan to finish my **Low bar** by this Sunday. During office hour get the necessary help. There are a few things I want to try out; like bots will shoot only if I get in their range. If low bar is successfully done I will work my way to the **Target bar**. SO, I have one week for **low bar** and the next week for **target bar**. If i still have time try to manage **high bar**. 
