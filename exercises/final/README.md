@@ -9,6 +9,7 @@ A nature music will play all the time. There will be shooting sound, a sound whe
 
 This is a sample Interface I got from Unity website. I will try to make it like this but exactly same. My gun and enemy and the place will be different. 
 ![alt text](https://github.com/ShihabPial/csc470-fall2020/blob/master/exercises/final/sketch.PNG "sketch")
+![alt text](https://github.com/ShihabPial/csc470-fall2020/blob/master/exercises/final/sketch2.PNG "sketch2")
 
 # Three set targets 
 ## Low bar
