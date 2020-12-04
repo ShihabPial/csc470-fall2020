@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerScript : MonoBehaviour
 {
     public CharacterController cc;
     float moveSpeeed = 10;
-
+    //float rotateSpeed = 5f;
+    public NavMeshAgent agent;
     Vector2 mouseDirection;
 
     public GameObject bullet;
@@ -23,21 +25,35 @@ public class PlayerScript : MonoBehaviour
     {
         //Basic WASD movement
         float xDirection = Input.GetAxis("Horizontal");
-        xDirection *= 1; //Was moving oppopsite direction. So multiplied with -1
         float zDirection = Input.GetAxis("Vertical");
-        zDirection *= 1;//Was moving oppopsite direction. So multiplied with -1
 
-        Vector3 moveDirection = new Vector3(xDirection, 0.0f, zDirection);
-        transform.position = transform.position + moveDirection * moveSpeeed * Time.deltaTime;
+        Vector3 moveDirectionRL = new Vector3(transform.forward.z, 0, transform.forward.x);
+        cc.Move(moveDirectionRL * moveSpeeed * xDirection * Time.deltaTime);
+
+        Vector3 moveDirectionUD = new Vector3(transform.forward.x, 0, transform.forward.z);
+        moveDirectionUD = moveDirectionUD.normalized;
+        cc.Move(moveDirectionUD * moveSpeeed * zDirection * Time.deltaTime);
+
+        //transform.Rotate(0, Input.GetAxis("Horizontal") * rotateSpeed * Time.deltaTime, 0, Space.Self);
+
+       // transform.Translate(transform.forward * Time.deltaTime, Space.World);
 
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject bulletEgg = Instantiate(bullet, transform.position + transform.forward * 3, Quaternion.identity);
-            Rigidbody bulletEggRb = bullet.GetComponent<Rigidbody>();
-            bulletEggRb.AddForce(transform.forward * 8000);
-            Destroy(bullet, 5);
+            GameObject bulletEgg = Instantiate(bullet, transform.position + transform.forward, Quaternion.identity);
+            Rigidbody eggRB = bulletEgg.GetComponent<Rigidbody>();
+            eggRB.AddForce(transform.forward * 8000);
+            Destroy(bulletEgg, 5);
         }
     }
+    void OnTriggerEnter(Collider other)
+    {
+        // When we collide with the apple tree, update score in game manager, and destroy the tree.
+        if (other.CompareTag("House"))
+        {
+           
 
+        }
+    }
 
 }

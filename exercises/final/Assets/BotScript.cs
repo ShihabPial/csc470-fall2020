@@ -8,6 +8,9 @@ public class BotScript : MonoBehaviour
 	public float lookradius = 10f;
 	public NavMeshAgent agent;
 	Transform target;
+	public GameObject bullet;
+	bool waitingToShoot = false;
+
 
 	// Start is called before the first frame update
 	void Start()
@@ -29,6 +32,31 @@ public class BotScript : MonoBehaviour
 				faceTarget();
             }
         }
+
+		if (Vector3.Distance(transform.position, target.transform.position) < 5f)
+		{
+			faceTarget();
+			if(!waitingToShoot)
+            {
+				waitingToShoot = true;
+				GameObject bulletEgg = Instantiate(bullet, transform.position + transform.forward, Quaternion.identity);
+				Rigidbody eggRB = bulletEgg.GetComponent<Rigidbody>();
+				eggRB.AddForce(transform.forward * 8000);
+				StartCoroutine(wait());
+				Destroy(bulletEgg, 5);
+			}
+			
+		}
+
+		
+	}
+
+	
+
+	IEnumerator wait()
+    {
+		yield return new WaitForSeconds(1);
+		waitingToShoot = false;
 	}
 
 	void faceTarget()

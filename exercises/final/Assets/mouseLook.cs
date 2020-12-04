@@ -5,7 +5,8 @@ using UnityEngine;
 public class mouseLook : MonoBehaviour
 {
     public float mouseSensitivity;
-    public Transform player, gun;
+    public Transform player;
+    public Transform gun;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,9 @@ public class mouseLook : MonoBehaviour
     {
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
+
+        Vector2 look = new Vector2(mouseX, mouseY);
+        transform.Rotate(0, mouseY, 0);
 
         float rotAmountX = mouseX * mouseSensitivity;
         float rotAmountY = mouseY * mouseSensitivity;
