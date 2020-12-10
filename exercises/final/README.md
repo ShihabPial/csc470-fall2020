@@ -11,7 +11,7 @@ This is a sample Interface I got from Unity website. I will try to make it like 
 ![alt text](https://github.com/ShihabPial/csc470-fall2020/blob/master/exercises/final/sketch.PNG "sketch")
 ![alt text](https://github.com/ShihabPial/csc470-fall2020/blob/master/exercises/final/sketch2.PNG "sketch2")
 
-# Three set targets 
+## Three set targets 
 ### Low bar
 One round of game. Kill the bots and the boss to win the game. Only shooting sound will be available. Movement will be as planned. Have a health regeneration point.
 ### Target
@@ -19,5 +19,16 @@ Definitely, complete the low bar. Add all kinds of sound described in the plan. 
 ### High Bar
 Complete the target. Add a navigation bar on top to see where are all the bots and the boss. Have a task bar to see what is the player supposed to do. Gun reloading once run out of bullets or plasma. m Adding crouch and prone.
 
-# Timeline 
+## Timeline 
 Originally I plan to finish my **Low bar** by this Sunday. During office hour get the necessary help. There are a few things I want to try out; like bots will shoot only if I get in their range. If low bar is successfully done I will work my way to the **Target bar**. SO, I have one week for **low bar** and the next week for **target bar**. If i still have time try to manage **high bar**. 
+
+# Actual Game
+This is a first person game called "Treasure Hunt". There are some bots guarding an ancient treasure in a forest. To get to the treasure hero has to kill all the bots. Otherwise the treasure will not show up. Once the bots sees you they will always follow you. They have the ability to shoot in sight. But the you have a hiding place. If you can get inside of it you are safe and health will regenerate. 
+A welcome message comes in as you entre the forest or to say start the game. 
+
+Main control units are WASD and mouse looks. Shoots with right mouse click. Canvas is your health bar. As you get hit it will go red. If you die you lose. 
+
+#Screshot of the game
+![alt text](https://github.com/ShihabPial/csc470-fall2020/blob/master/exercises/final/sketch.PNG "Demo1")
+![alt text](https://github.com/ShihabPial/csc470-fall2020/blob/master/exercises/final/sketch2.PNG "Demo2")
+![alt text](https://github.com/ShihabPial/csc470-fall2020/blob/master/exercises/final/sketch2.PNG "Demo3")
