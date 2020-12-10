@@ -19,6 +19,8 @@ public class BotScript : MonoBehaviour
 
 	public GameObject healthBox;
 
+	public GameManager gm;
+
 
 	// Start is called before the first frame update
 	void Start()
@@ -99,6 +101,7 @@ public class BotScript : MonoBehaviour
             {
 				healthBox.SetActive(false);
 				Destroy(this.gameObject);
+				gm.botCount--;
 			}
 			
 		}

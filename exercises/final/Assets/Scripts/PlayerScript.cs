@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class PlayerScript : MonoBehaviour
     public AudioSource footstepAudio;
     public AudioClip footstepClip;
     bool waitingToPlay = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -91,10 +93,17 @@ public class PlayerScript : MonoBehaviour
             healUP();
         }
 
-        if(health == 0)
+        if (other.CompareTag("Treasure"))
         {
-            Destroy(this.gameObject);
+            SceneManager.LoadScene("EndScene");
         }
+
+        if (health == 0)
+        {
+            SceneManager.LoadScene("LoseScene");
+        }
+
+        
     }
 
     public void takeDamage()

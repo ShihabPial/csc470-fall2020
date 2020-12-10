@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public Image healthImage;
     public PlayerScript player;
     public GameObject textbox;
+    public int botCount = 4;
+    public GameObject treasure;
 
 
     public void Awake()
@@ -38,7 +40,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(botCount == 0)
+        {
+            treasure.SetActive(true);
+        }
     }
 
     IEnumerator fade()
