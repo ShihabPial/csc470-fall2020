@@ -28,7 +28,7 @@ A welcome message comes in as you entre the forest or to say start the game.
 
 Main control units are WASD and mouse looks. Shoots with right mouse click. Canvas is your health bar. As you get hit it will go red. If you die you lose. 
 
-#Screshot of the game
+#Screenshots of the game
 ![alt text](https://github.com/ShihabPial/csc470-fall2020/blob/master/exercises/final/Demo1.PNG "Demo1")
 ![alt text](https://github.com/ShihabPial/csc470-fall2020/blob/master/exercises/final/Demo2.PNG "Demo2")
 ![alt text](https://github.com/ShihabPial/csc470-fall2020/blob/master/exercises/final/Demo3.PNG "Demo3")
