@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class BotScript : MonoBehaviour
 {
@@ -10,6 +11,13 @@ public class BotScript : MonoBehaviour
 	Transform target;
 	public GameObject bullet;
 	bool waitingToShoot = false;
+	public float health = 80f;
+
+	public MeterScript meter;
+
+	public Image healthImage;
+
+	public GameObject healthBox;
 
 
 	// Start is called before the first frame update
@@ -18,6 +26,7 @@ public class BotScript : MonoBehaviour
 		StartCoroutine(NavigationBehavior());
 		target = PlayerController.instance.player.transform;
 		agent = GetComponent<NavMeshAgent>();
+		healthBox.SetActive(false);
 	}
 
 	// Update is called once per frame
@@ -35,20 +44,17 @@ public class BotScript : MonoBehaviour
 
 		if (Vector3.Distance(transform.position, target.transform.position) < 5f)
 		{
-			faceTarget();
-			if(!waitingToShoot)
-            {
-				waitingToShoot = true;
-				GameObject bulletEgg = Instantiate(bullet, transform.position + transform.forward, Quaternion.identity);
-				Rigidbody eggRB = bulletEgg.GetComponent<Rigidbody>();
-				eggRB.AddForce(transform.forward * 8000);
-				StartCoroutine(wait());
-				Destroy(bulletEgg, 5);
-			}
-			
+			faceTarget(); 
+				if (!waitingToShoot)
+				{					
+					waitingToShoot = true;
+					GameObject bulletEgg = Instantiate(bullet, transform.position + transform.forward, Quaternion.identity);
+					Rigidbody eggRB = bulletEgg.GetComponent<Rigidbody>();
+					eggRB.AddForce(transform.forward * 2000);
+					StartCoroutine(wait());
+					Destroy(bulletEgg, 5);
+				}
 		}
-
-		
 	}
 
 	
@@ -62,8 +68,8 @@ public class BotScript : MonoBehaviour
 	void faceTarget()
     {
 		Vector3 direction = (target.position - transform.position).normalized;
-		Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
-		transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+		Quaternion lookRotation = Quaternion.LookRotation(direction);
+		transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime);
 	}
 
     private void OnDrawGizmosSelected()
@@ -81,5 +87,32 @@ public class BotScript : MonoBehaviour
 
 			yield return new WaitForSeconds(4);
 		}
+	}
+
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.CompareTag("Egg"))
+		{
+			healthBox.SetActive(true);
+			takeDamage();
+			if (health == 0)
+            {
+				healthBox.SetActive(false);
+				Destroy(this.gameObject);
+			}
+			
+		}
+	}
+
+	public void takeDamage()
+	{
+		this.health -= 10;
+		updateUI();
+	}
+
+	void updateUI()
+    {
+		healthImage.fillAmount = health / 100f;
+		Debug.Log(healthImage.fillAmount);
 	}
 }

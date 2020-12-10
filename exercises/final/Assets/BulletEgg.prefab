@@ -90,10 +90,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3741514975800771600}
-  - component: {fileID: 5029652062677803752}
+  - component: {fileID: 6154954181297369528}
+  - component: {fileID: -1297774451474717543}
   m_Layer: 0
   m_Name: BulletEgg
-  m_TagString: Untagged
+  m_TagString: Egg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,7 +114,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 220, z: 0}
---- !u!54 &5029652062677803752
+--- !u!136 &6154954181297369528
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4082329033949879978}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 43.738697
+  m_Height: 130.11565
+  m_Direction: 1
+  m_Center: {x: -0.21373482, y: 53.78185, z: 0.037431724}
+--- !u!54 &-1297774451474717543
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

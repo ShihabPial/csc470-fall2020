@@ -6,6 +6,7 @@ TagManager:
   tags:
   - House
   - Enemy
+  - Egg
   layers:
   - Default
   - TransparentFX
